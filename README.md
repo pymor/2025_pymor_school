@@ -5,13 +5,14 @@ of [pyMOR School](https://2025.school.pymor.org).
 
 ## Virtual environment
 
-Tested using Python 3.12.3:
+Tested on Linux:
 
 ```
-python -m venv .venv
+uv venv -p 3.12
 source .venv/bin/activate
-pip install numpy
-ln -s .venv/bin/f2py .venv/bin/f2py3
-pip install -U pip
-pip install -r requirements.txt
+uv pip install numpy
+cd .venv/bin
+ln -s f2py f2py3
+cd ../..
+uv pip install -r requirements.txt
 ```
